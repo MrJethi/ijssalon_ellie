@@ -1,16 +1,28 @@
-Mijn_dictionary = {
-    "aardbei" : 3,
-    "vanille" : 4,
-    "chocolade" : 5
-}
-aanbieding = Mijn_dictionary["aardbei"] * 0.8 
-reclame_tekst = "aardbei-ijs, 1 liter - slechts € " + str(aanbieding)
-reclame_tekst2 = reclame_tekst [:36]
-reclame_tekst3 = reclame_tekst2.swapcase()
-reclame_tekst4 = reclame_tekst3.split(" ")
-for el in reclame_tekst4:
-    if len(el) >=5:
-        print(el.upper())
-    else:
-        print(el.lower())
-    
+from helper import decodeer
+
+def print_aanbieding():
+    prijzen = {
+        "aardbei" : 3,
+        "vanille" : 4,
+        "chocolade" : 5
+    }
+
+    aanbieding = prijzen["aardbei"] * 0.8
+
+    reclame_tekst = "aardbei-ijs, 1 liter - slechts € " + str(aanbieding)
+
+    reclame_tekst2 = reclame_tekst [:36]
+
+    reclame_tekst3 = reclame_tekst2.swapcase()
+
+    reclame_tekst4 = reclame_tekst3.split(" ")
+
+    for el in reclame_tekst4:
+        if len(el) >=5:
+            print(el.upper())
+        else:
+            print(el.lower())
+
+decodeer("aanbieding")
+print_aanbieding()
+        
